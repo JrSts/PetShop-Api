@@ -82,6 +82,7 @@ model ServicosPorPets {
   servico         Servico        @relation(fields: [servicoId], references: [id])
   pet             Pet            @relation(fields: [petId], references: [id])
   horario         DateTime
+  domicilio       Boolean
   pagamento       Boolean
   formaPagamento  FormaPagamento @default(DINHEIRO)
   TransacaoUser   TransacaoUser? @relation(fields: [transacaoUserId], references: [id])
